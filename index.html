@@ -9,31 +9,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>The Power of Simplicity</title>
 </head>
 
 <body>
     <div class="container">
         <header class="header">
-            <a href="#" class="header_logo">
-                <img src="./img/apple.svg" alt="Apple">
-            </a>
-            <nav class="header_nav">
-                <ul class="nav_ul">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="./img/apple.svg" alt="Apple">
+                </a>
+            </div>
+            <label for="menu">
+                <span class="material-icons">menu</span>
+            </label>
+            <input id="menu" type="checkbox">
+            <nav class="header__nav">
+                <ul class="nav__ul">
                     <li class="li"><a href="#">Features</a></li>
                     <li class="li"><a href="#">Partners</a></li>
                     <li class="li"><a href="#">Stories</a></li>
                 </ul>
             </nav>
-            <div class="header_download">
-                <a href="#" class="header_btn">Download for free</a>
+            <div class="header__download">
+                <a href="#" class="header__btn">Download for free</a>
             </div>
         </header>
         <main class="main">
-            <h1 class="main_title">The Power of Simplicity</h1>
-            <p class="main_description">Instead of spending time searching for the right app, our AI will bring the right app to you.</p>
-            <a href="#" class="main_btn">Learn</a>
-            <div class="main_icons">
+            <h1 class="main__title">The Power of Simplicity</h1>
+            <p class="main__description">Instead of spending time searching for the right app, our AI will bring the right app to you.</p>
+            <a href="#" class="main__btn">Learn</a>
+            <div class="main__icons">
                 <img src="./img/circle_null.svg" alt="circle">
                 <img src="./img/circle_null.svg" alt="circle">
                 <img src="./img/circle.svg" alt="circle1">

@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(124.53deg, #FC3F5F 0%, #7D61FF 100.32%);
+    width: 100%;
     padding: 95px;
 }
 
@@ -19,29 +20,32 @@ body {
 }
 
 /* Начало Header */
+.header__logo {
+    min-width: 180px;
+}
 .header {
     display: flex;
     justify-content: space-between;
     padding: 48px 32px;
     align-items: center;
 }
-
-.header_logo,
-.header_download {
+.header__download {
     min-width: 180px;
+    text-align: right;
 }
-
-.nav_ul {
+.nav__ul {
     display: flex;
     gap: 64px;
     padding-left: 0px;
 }
-
-.header_nav li {
+.header__nav li {
     list-style: none;
 }
+.header__nav li:hover {
+    text-decoration: underline;
+}
 
-.header_nav a {
+.header__nav a {
     font-family: 'Poppins';
     text-decoration: none;
     font-weight: 300;
@@ -49,12 +53,7 @@ body {
     line-height: 21px;
     color: #A0A3A7;
 }
-
-.header_download {
-    text-align: right;
-}
-
-.header_btn {
+.header__btn {
     display: inline-block;
     padding: 16px 24px;
     background: linear-gradient(93.22deg, #E1E1E1 8.37%, #FFFFFF 99.95%);
@@ -65,6 +64,12 @@ body {
     line-height: 21px;
     text-decoration: none;
     color: #24282E;
+    transition: .3s all ease-in-out;
+}
+.header__btn:hover {
+    background: #4d474c;
+    color: #F2F4F7;
+    border: 1px solid #FC40F4;
 }
 
 /* Конец Header */
@@ -75,8 +80,7 @@ body {
     padding: 180px 20px 161px 20px;
     text-align: center;
 }
-
-.main_title {
+.main__title {
     max-width: 598px;
     width: 100%;
     margin: 0;
@@ -87,10 +91,12 @@ body {
     line-height: 108px;
     color: #F2F4F7;
     margin-bottom: 22px;
-
+    transition: .3s all ease-in-out;
 }
-
-.main_description {
+.main__title:hover {
+    color: #FC40F4;
+}
+.main__description {
     max-width: 598px;
     width: 100%;
     margin: 0;
@@ -102,8 +108,7 @@ body {
     color: #F2F4F7;
     margin-bottom: 80px;
 }
-
-.main_btn {
+.main__btn {
     display: inline-block;
     min-width: 240px;
     font-weight: 600;
@@ -117,12 +122,108 @@ body {
     box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     margin-bottom: 64px;
+    transition: .5s all ease-in-out;
 }
-
-.main_icons {
+.main__btn:hover {
+    color: rgb(231, 219, 219);
+    background: #515255;
+    border: none;
+    transform: translateY(-10px);
+}
+.main__icons {
     display: flex;
     padding: 16px;
     gap: 32px;
     justify-content: center;
 }
 /* Конец главного блока */
+
+input{
+    display: none;
+}
+.header .material-icons{
+    display: none;
+}
+label {
+    display: none;
+}
+/* Адаптация под планшеты */
+@media (max-width:950px){
+    .header__download{
+        display: none;
+    }
+    .main__title {
+        font-size: 52px;
+        line-height: 80px;
+    }
+    .main {
+        padding-top: 70px;
+        padding-bottom: 50px;
+        max-width: 500px;
+        margin-inline: auto;
+    }
+    .main__btn {
+        margin-bottom: 45px;
+    }
+    .main__description {
+        margin-bottom: 60px;
+    }
+}
+/* Адаптация под телефон */
+@media (max-width:768px){
+    html, body {
+        height: 100%;
+    }
+    body {
+        padding: 20px;
+    }
+    label {
+        display: inline-block;
+    }
+    .header     .material-icons:hover {
+        color: #FC40F4;
+    }
+    .main__title {
+        font-size: 42px;
+        line-height: 70px;
+    }
+    
+    .header__nav{
+        position: fixed;
+        top: 5%;
+        left: 0;
+        width: 150px;
+        height: auto;
+        background: #2f2f30;
+        border-radius: 15px;
+        transform: translateX(-200%);
+        transition: .5s all ease-in-out;
+    }
+    .header .material-icons{
+        display: block;
+        color: #F2F4F7;
+        font-size: 38px;
+    }
+    .header__nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }  
+    .header__nav li {
+        border: 1px solid rgb(201, 194, 194);
+        padding: 15px;
+        border-radius: 50px;
+    }
+    .header__nav li:hover {
+        text-decoration: none;
+        background: linear-gradient(180deg, rgba(43, 34, 21, 0.8) -1.22%, #22282E 101.33%);
+        border-color: #FC40F4;
+    }
+    .header__nav li a:hover {
+       color: #FC40F4;
+    }
+    input:checked~.header__nav{
+        transform: translateX(0);
+    }
+}
+
