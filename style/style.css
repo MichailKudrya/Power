@@ -180,9 +180,7 @@ label {
     label {
         display: inline-block;
     }
-    .header     .material-icons:hover {
-        color: #FC40F4;
-    }
+    
     .main__title {
         font-size: 42px;
         line-height: 70px;
@@ -205,6 +203,7 @@ label {
         font-size: 38px;
     }
     .header__nav ul {
+        padding: 5px 10px;
         flex-direction: column;
         text-align: center;
         gap: 5px;
